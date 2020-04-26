@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rollovers 3: Fading</title>
+	<style>
+		body {
+			font: 12px arial, helvetica, sans-serif;
+		}
+
+		#toucan {
+			/* Note: Using the '#toucan' ID selector (targeting elements with 'id="toucan"') instead of a simple 'a' HTML selector (targeting all a elements) so that this doesn't target the link back to HTML Dog at the bottom of the page */
+			display: block;
+			width: 200px;
+			height: 63px;
+			background: url(/examples/images/toucancombo.jpg);
+			text-indent: -999em;
+			position: relative;
+		}
+
+		#toucan:after {
+			content: "";
+			background: url(/examples/images/toucancombo.jpg) bottom;
+			display: block;
+			position: absolute;
+			top: 0;
+			height: 63px;
+			width: 200px;
+			opacity: 0;
+			-webkit-transition: .5s;
+			transition: .5s;
+		}
+
+		#toucan:hover:after {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<p><a href="#" id="toucan">Toucan</a></p>
+
+	<!-- Link back to HTML Dog: -->
+	<p><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+</body>
+</html>
